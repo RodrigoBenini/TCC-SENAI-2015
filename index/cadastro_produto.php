@@ -1,9 +1,3 @@
-<!--**
- * @author Cesar Szpak - Celke -   cesar@celke.com.br
- * @pagina desenvolvida usando framework bootstrap,
- * o código é aberto e o uso é free,
- * porém lembre -se de conceder os créditos ao desenvolvedor.
- *-->
 <!DOCTYPE html>
 <html lang="pt-br">
 	<head>
@@ -14,32 +8,7 @@
 		<link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 		<script src="bootstrap/js/bootstrap.min.js"></script>
-		<script type="text/javascript">
-			function validar_form_contato(){
-				var nome = formcontato.nome.value;
-				var email = formcontato.email.value;
-				var assunto = formcontato.assunto.value;
-				var mensagem = formcontato.mensagem.value;
-				
-				if(nome == ""){
-					alert("Campo nome é obrigatorio");
-					formcontato.nome.focus();
-					return false;
-				}if(email == ""){
-					alert("Campo email é obrigatorio");
-					formcontato.email.focus();
-					return false;
-				}if(assunto == ""){
-					alert("Campo assunto é obrigatorio");
-					formcontato.assunto.focus();
-					return false;
-				}if(mensagem == ""){
-					alert("Campo mensagem é obrigatorio");
-					formcontato.mensagem.focus();
-					return false;
-				}
-			}
-		</script>
+
 	<head>
 	<body>
 		<div class="container theme-showcase" role="main">
@@ -47,8 +16,16 @@
 				<h1 class="col-sm-8 offset-sm-2 text-info">Cadastro de Produto: </h1>
 				<br>
 			</div>
-			<form class="form-horizontal" name="formprodutos" method="POST" action="produtos.php">
+			<form class="form-horizontal" name="formulario_produtos" method="POST" action="registra_produto.php">
 			<div class="bg-light col-sm-8 offset-sm-2"> 
+				<div class="form-group">
+					<label for="inputEmail3" class=" control-label">
+						ID do produto: 
+					</label>
+					<div class="">
+						 <input type="text" class="form-control col-sm-2" name="id" placeholder="ID única" required>
+					</div>
+				</div>
 				<div class="form-group">
 					<label for="inputEmail3" class="control-label">
 						Nome do produto: 
@@ -57,16 +34,7 @@
 						<input type="text" class="form-control" name="nome_produto" placeholder="Digite o nome do produto" required>
 					</div>
 				</div>
-				
-				<div class="form-group">
-					<label for="inputEmail3" class=" control-label">
-						ID do produto: 
-					</label>
-					<div class="">
-						 <input type="text" class="form-control" name="id_produto" placeholder="* ID única" required>
-					</div>
-				</div>
-				
+		
 				<div class="form-group">
 					<label for="inputEmail3" class=" control-label">
 						Foto: 
@@ -93,19 +61,35 @@
 				
 				<div class="form-group">
 					<label for="inputEmail3" class=" control-label">
-						Comentário: 
+						Descrição do Produto: 
+					</label>
+					<div class="form-group">
+						<textarea class="form-control" name="descricao_produto" required></textarea>
+					</div>
+
+				</div>
+				<div class="form-group">
+					<label for="inputEmail3" class=" control-label">
+						Dimensões: 
 					</label>
 					<div class="">
-						<textarea class="form-control" name="comentario"></textarea>
+						 <input type="text" class="form-control col-sm-2 float-sm-left" name="altura_produto" placeholder="Altura" required>
+						 <input type="text" class="form-control col-sm-2 offset-sm-1 float-sm-left" name="largura_produto" placeholder="Largura" required>				
+						 <input type="text" class="form-control col-sm-2  offset-sm-1 float-sm-left" name="profundidade_produto" placeholder="Profundidade" required>
+						 
 					</div>
-					<br>
+
 				</div>
+	<br>
+		<br>
 			</div>
+			<br>
 				<div class=" text-center">
-				<input class="text-center btn btn-success" type="submit" value="Enviar" onclick="return validar_form_contato()">
+				<input class="text-center btn btn-success" type="submit" value="Enviar">
 			</div>
 			</form>
 		</div>
+
 	
 	</body>
 </html>
