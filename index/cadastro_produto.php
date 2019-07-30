@@ -18,6 +18,7 @@
 			</div>
 			<form class="form-horizontal" name="formulario_produtos" method="POST" action="registra_produto.php">
 			<div class="bg-light col-sm-8 offset-sm-2"> 
+
 				<div class="form-group">
 					<label for="inputEmail3" class=" control-label">
 						ID do produto: 
@@ -26,6 +27,7 @@
 						 <input type="text" class="form-control col-sm-2" name="id" placeholder="ID única" required>
 					</div>
 				</div>
+
 				<div class="form-group">
 					<label for="inputEmail3" class="control-label">
 						Nome do produto: 

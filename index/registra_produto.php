@@ -12,15 +12,14 @@ $profundidade_produto = $_POST['profundidade_produto'];
 
 $objetodb = new db();
 $link =  $objetodb -> conecta_mysql();
-
 $sql = "insert into produtos(id,nome_produto,foto_produto,preco_produto,descricao_produto,altura_produto,largura_produto,profundidade_produto) values( '$id','$nome_produto','$foto_produto','$preco_produto','$descricao_produto', '$altura_produto','$largura_produto','$profundidade_produto')";
 
 if(mysqli_query($link, $sql)){
 		echo 'Produto cadastrado com sucesso';
+
 	}else{
 		echo 'Erro ao cadastrar produto';
-		}
-	;
+		};
 
 
 ?>
