@@ -17,6 +17,11 @@ public function conecta_mysql(){
 	}
 
 			return $con;
+
 }
 }
+
+
+
+
 ?>

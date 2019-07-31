@@ -6,14 +6,15 @@
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
-		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 		<script src="bootstrap/js/bootstrap.min.js"></script>
 
 	<head>
 	<body>
 		<div class="container theme-showcase" role="main">
 			<div class=" page-header">
-				<h1 class="col-sm-8 offset-sm-2 text-info">Cadastro de Produto: </h1>
+				<br>
+				<h1 class="col-sm-5 offset-sm-2 bg-light text-info text-center border border-info" enctype="multipart/form-data">Cadastro de Produto: </h1>
 				<br>
 			</div>
 			<form class="form-horizontal" name="formulario_produtos" method="POST" action="registra_produto.php">
@@ -36,17 +37,7 @@
 						<input type="text" class="form-control" name="nome_produto" placeholder="Digite o nome do produto" required>
 					</div>
 				</div>
-		
-				<div class="form-group">
-					<label for="inputEmail3" class=" control-label">
-						Foto: 
-					</label>
-					<div class="custom-file">
-						 <input type="file" class="custom-file-input" id="foto_produto"  name="foto_produto" placeholder="Insira a foto do produto" required>
-						  <label class="custom-file-label" for="foto_produto">Selecione a foto</label>
-					</div>
-
-				</div>
+				
 
 				<div class="form-group">
 					<label for="inputEmail3" class=" control-label">
@@ -86,9 +77,16 @@
 		<br>
 			</div>
 			<br>
-				<div class=" text-center">
+			<div class="row justify-content-md-center">
+				<div class="text-center col-md-auto">
+				<a href="home.php"><button class="text-center btn btn-info" type="button">Voltar</button>
+				</div>
+
+				<div class="text-center col-md-auto">
 				<input class="text-center btn btn-success" type="submit" value="Enviar">
+				</div>
 			</div>
+
 			</form>
 		</div>
 
